@@ -9,6 +9,8 @@ server.use(cors());
 server.use(middlewares)
 server.use(router)
 
-server.listen(process.env.port || 3000, () => {
-  console.log('JSON Server is running')
+const port = process.env.port || 3000;
+
+server.listen(port, () => {
+  console.log(`JSON Server is running on port ${port}`)
 })
